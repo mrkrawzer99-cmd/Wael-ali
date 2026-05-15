@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudan - Register / Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tabs {
+            display: flex;
+            margin-bottom: 0;
+            border-bottom: 2px solid #006600;
+        }
+        .tab-btn {
+            padding: 10px 30px;
+            background: #eee;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            color: #555;
+            border-top: 3px solid transparent;
+        }
+        .tab-btn.active-tab {
+            background: #fff;
+            color: #8b0000;
+            border-top: 3px solid #8b0000;
+            border-bottom: 2px solid #fff;
+            margin-bottom: -2px;
+        }
+        .tab-panel {
+            display: none;
+            padding-top: 20px;
+        }
+        .tab-panel.active-panel {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+    <div class="banner">
+        <div class="flag-colors">
+            <span class="flag-red"></span>
+            <span class="flag-white"></span>
+            <span class="flag-black"></span>
+            <span class="flag-green"></span>
+        </div>
+        <div>
+            <h1>&#127758; Republic of Sudan</h1>
+            <p>The Land of the Nile &mdash; History, Culture &amp; Beauty</p>
+        </div>
+        <div class="flag-colors">
+            <span class="flag-red"></span>
+            <span class="flag-white"></span>
+            <span class="flag-black"></span>
+            <span class="flag-green"></span>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="topics.html">Topics</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="register.html" class="active">Register</a>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div id="main-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <div id="left-sidebar">
+        <div class="sidebar-box">
+            <h3>Member Benefits</h3>
+            <ul>
+                <li>Save favourite articles</li>
+                <li>Leave comments</li>
+                <li>Get updates</li>
+                <li>Share your photos</li>
+                <li>Join discussions</li>
+            </ul>
+        </div>
+        <div class="sidebar-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Sudan</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+        <div class="page-intro">
+            <h2>Register / Login</h2>
+            <p>Create a free account or log in to access more features on our website</p>
+        </div>
+
+        <h2>Join Our Sudan Community</h2>
+        <p>Register for a free account to access all features of the Sudan website. You can save articles, comment on posts, and share your own photos and stories about Sudan.</p>
+
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="tab-btn active-tab" onclick="showTab('register')">Create Account</button>
+            <button class="tab-btn" onclick="showTab('login')">Login</button>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="register" class="tab-panel active-panel">
+            <h3>Create a New Account</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="reg_first">First Name: *</label>
+                    <input type="text" id="reg_first" name="reg_first" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_last">Last Name: *</label>
+                    <input type="text" id="reg_last" name="reg_last" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_email">Email Address: *</label>
+                    <input type="email" id="reg_email" name="reg_email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_username">Username: *</label>
+                    <input type="text" id="reg_username" name="reg_username" placeholder="Choose a username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_password">Password: *</label>
+                    <input type="password" id="reg_password" name="reg_password" placeholder="Enter a strong password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_confirm">Confirm Password: *</label>
+                    <input type="password" id="reg_confirm" name="reg_confirm" placeholder="Repeat your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_country">Your Country:</label>
+                    <select id="reg_country" name="reg_country">
+                        <option value="">-- Select your country --</option>
+                        <option value="sudan">Sudan</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="ethiopia">Ethiopia</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg_interest">What interests you most about Sudan?</label>
+                    <select id="reg_interest" name="reg_interest">
+                        <option value="">-- Select an interest --</option>
+                        <option value="history">History</option>
+                        <option value="culture">Culture</option>
+                        <option value="tourism">Tourism</option>
+                        <option value="food">Food</option>
+                        <option value="nature">Nature</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="reg_terms" required>
+                        I agree to the Terms and Conditions of this website.
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="reg_newsletter">
+                        I want to receive updates and news about Sudan by email.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="login" class="tab-panel">
+            <h3>Login to Your Account</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="login_email">Email or Username: *</label>
+                    <input type="text" id="login_email" name="login_email" placeholder="Enter your email or username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login_password">Password: *</label>
+                    <input type="password" id="login_password" name="login_password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="remember_me">
+                        Remember me on this device
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p style="margin-top:14px; font-size:14px;">
+                Don't have an account yet? <a href="#" onclick="showTab('register')">Register here</a>.
+            </p>
+            <p style="font-size:14px;">
+                <a href="#">Forgot your password?</a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div id="right-sidebar">
+        <div class="sidebar-box">
+            <h3>Why Register?</h3>
+            <div class="fact-box">
+                <strong>Free Account</strong>
+                Registration is completely free. No payment required.
+            </div>
+            <div class="fact-box">
+                <strong>Community</strong>
+                Join a community of people who love learning about Sudan.
+            </div>
+            <div class="fact-box">
+                <strong>Updates</strong>
+                Get the latest articles and news about Sudan sent to your email.
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <h3>Other Pages</h3>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Our Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div><!-- end main-layout -->
+
+<!-- FOOTER -->
+<div id="footer">
+    <div class="footer-inner">
+        <div>
+            <h4>Contact Info</h4>
+            <p>Email: info@sudanwebsite.com</p>
+            <p>Phone: +249 900 000 000</p>
+            <p>Khartoum, Sudan</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="topics.html">Topics</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div>
+            <h4>Social Media</h4>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter / X</a>
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Sudan Website. All Rights Reserved.</p>
+        <p class="student-info">Made by: Wael Ali Khalid &nbsp;|&nbsp; Reg. No: 26/38447</p>
+    </div>
+</div>
+
+<!-- JAVASCRIPT FOR TABS -->
+<script>
+    function showTab(tabName) {
+        var panels = document.querySelectorAll('.tab-panel');
+        var buttons = document.querySelectorAll('.tab-btn');
+        panels.forEach(function(p) {
+            p.classList.remove('active-panel');
+        });
+        buttons.forEach(function(b) {
+            b.classList.remove('active-tab');
+        });
+        document.getElementById(tabName).classList.add('active-panel');
+        if (tabName === 'register') {
+            buttons[0].classList.add('active-tab');
+        } else {
+            buttons[1].classList.add('active-tab');
+        }
+    }
+</script>
+
+</body>
+</html>
